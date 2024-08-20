@@ -134,7 +134,7 @@ export default function Proyect() {
           Proyectos
         </h2>
       </section>
-      <section className="flex items-end">
+      <section className="flex items-end mt-5 md:mt-0">
         <Filter PROJECT={PROJECTS} filter={filter} setFilter={setFilter} />
       </section>
       <section className="mt-14 w-full md:w-full grid grid-cols-1 gap-x-5 gap-y-5 md:grid-cols-2 m-auto md:ml-3">

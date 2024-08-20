@@ -10,7 +10,7 @@ export default function Filter({ PROJECT, filter, setFilter }) {
   const UniqueType = [...new Set(PROJECT.map((animal) => animal.type))];
 
   return (
-    <section className="flex w-full justify-end items-end mt-2">
+    <section className="flex w-full justify-end items-end">
       <div className="flex w-[200px]  items-start   text-black">
         <Select
           color="default"
