@@ -9,7 +9,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: url("/public/projects/backgroud.avif");
+  background-color: #051d74;
+  background-image: url("/projects/backgroud.avif");
   background-size: cover;
   background-repeat: no-repeat;
   font-synthesis: none;
@@ -26,7 +27,7 @@
 
 body {
   --sb-track-color: #ffffff;
-  --sb-thumb-color: #012090;
+  --sb-thumb-color: #051d74;
   --sb-size: 3px;
 }
 
