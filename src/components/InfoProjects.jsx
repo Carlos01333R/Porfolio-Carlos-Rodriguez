@@ -29,6 +29,7 @@ export default function InfoProjects({
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         style={{
+          backgroundColor: "#021456",
           backgroundImage:
             'url("https://img.freepik.com/premium-photo/textured-dark-blue-background_882595-3912.jpg")',
           backgroundSize: "cover",
