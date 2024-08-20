@@ -28,7 +28,7 @@ function App() {
 
       <footer className=" w-[90%] md:max-w-[900px] mx-auto mt-40 flex justify-center items-center">
         <div className="flex gap-5 ml-1">
-          <p>© Carlos Rodriguez | inspirado midudev 🙏</p>
+          <p className="truncate">© Carlos Rodriguez | inspirado midudev 🙏</p>
         </div>
       </footer>
     </>

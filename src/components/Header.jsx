@@ -61,12 +61,7 @@ export default function Header() {
             </a>
           </li>
           <li className="flex items-center gap-x-2">
-            <a
-              href="#contact"
-              onClick={(e) => handleScrollToSection(e, "contact")}
-            >
-              Contacto
-            </a>
+            <a href="mailto:carlosrodriguezanavila0@@gmail.com">Contacto</a>
           </li>
         </ul>
       </nav>
