@@ -17,6 +17,9 @@ export default {
         'raleway-regular': ['Raleway-Regular', 'sans-serif'],
         'raleway-semibold': ['Raleway-SemiBold', 'sans-serif'],
       },
+      placeholderColor: {
+        'custom-gray': 'black', // Cambia esto al color que desees
+      },
     },
   },
  

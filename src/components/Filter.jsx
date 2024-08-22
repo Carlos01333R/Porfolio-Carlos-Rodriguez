@@ -10,12 +10,12 @@ export default function Filter({ PROJECT, filter, setFilter }) {
   const UniqueType = [...new Set(PROJECT.map((animal) => animal.type))];
 
   return (
-    <section className="flex w-full justify-end items-end">
-      <div className="flex w-[200px]  items-start   text-black">
+    <section className="flex w-full justify-end items-end ">
+      <div className="flex w-[200px]  items-start   ">
         <Select
-          color="default"
+          color="none"
           placeholder="Landing, Web app, etc."
-          className="max-w-xs flex justify-end items-end"
+          className="max-w-xs flex justify-end  items-end text-black "
           value={filter}
           onChange={handleSelect}
         >
@@ -24,6 +24,7 @@ export default function Filter({ PROJECT, filter, setFilter }) {
           </SelectItem>
           {UniqueType.map((animal) => (
             <SelectItem
+              color="default"
               className="bg-gray-700 text-white"
               key={animal}
               value={animal}

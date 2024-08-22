@@ -1,4 +1,4 @@
-import { Image, Button } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import LinkedIn from "./icon/LinkedIn";
 import DropdownContact from "./Dropdown";
 export default function Hero() {
@@ -30,20 +30,14 @@ export default function Hero() {
         </div>
         <div className="flex gap-5 mt-5">
           <DropdownContact />
-
-          <Button
-            color="white"
+          <a
             className="bg-transparent border-2 border-gray-50 p-1  px-2 rounded-xl flex items-center gap-2"
+            target="_black"
+            href="https://www.linkedin.com/in/carlos-andres-rodriguez-avila-9742a428b/"
           >
-            <a
-              className="flex items-center gap-2"
-              target="_black"
-              href="https://www.linkedin.com/in/carlos-andres-rodriguez-avila-9742a428b/"
-            >
-              <LinkedIn />
-              LinkedIn
-            </a>
-          </Button>
+            <LinkedIn />
+            LinkedIn
+          </a>
         </div>
       </section>
     </>

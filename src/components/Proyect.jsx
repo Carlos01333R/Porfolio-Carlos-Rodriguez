@@ -163,6 +163,7 @@ export default function Proyect() {
                     onOpen();
                   }}
                   className="bg-gray-700 rounded-full"
+                  name="Info project"
                 >
                   <Info />
                 </button>
