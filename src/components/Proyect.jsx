@@ -1,4 +1,4 @@
-import { Button, useDisclosure } from "@nextui-org/react";
+import { Button, useDisclosure, Tooltip } from "@nextui-org/react";
 import { useState } from "react";
 import More from "./icon/More";
 import Less from "./icon/Less";
@@ -43,6 +43,16 @@ export default function Proyect() {
   };
 
   const PROJECTS = [
+    {
+      title: "FurEver | Adocta un animal",
+      description:
+        "Landing page de demo para FurEver, una plataforma de adoquin de animales, donde puedes adoptar un animal consumiendo una api externa",
+      link: "https://fur-ever.vercel.app/",
+      github: "https://github.com/Carlos01333R/FurEver.git",
+      image: "/projects/FurEver.png",
+      type: "Landing",
+      tags: [TAGS.REACT, TAGS.TAILWIND],
+    },
     {
       title: "Luxury contructora DEMO",
       description:
@@ -157,16 +167,22 @@ export default function Proyect() {
                 </p>
               </div>
               <div className="absolute top-1 flex left-[90%] z-20 w-10 px-2 py-1">
-                <button
-                  onClick={() => {
-                    setIdProject(project.link);
-                    onOpen();
-                  }}
-                  className="bg-gray-700 rounded-full"
-                  name="Info project"
+                <Tooltip
+                  className="text-black font-raleway-medium"
+                  content="Ver más información"
+                  placement="top"
                 >
-                  <Info />
-                </button>
+                  <button
+                    onClick={() => {
+                      setIdProject(project.link);
+                      onOpen();
+                    }}
+                    className="bg-gray-700 rounded-full"
+                    name="Info project"
+                  >
+                    <Info />
+                  </button>
+                </Tooltip>
               </div>
               <p className="absolute bottom-5 left-5 z-20 w-[80%]  text-2xl font-raleway-black flex flex-col truncate">
                 {project.title}
