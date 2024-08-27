@@ -9,7 +9,7 @@ export default function Experiencie() {
       company: "Pes pedro romero",
       description:
         "Gestión de base de datos y software, ademas de ayudar en sistemas informaticos  ",
-      link: "https://www.cartagena.gov.co/node/65",
+      link: "https://drive.google.com/file/d/1ifylpEXDYYGBN8wTqg8mQ1KRyfx4UyK2/view?usp=sharing",
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ export default function Experiencie() {
       title: "Principal Frontend ",
       company: "Propio",
       description:
-        "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
+        "Desarrollo de aplicaciones web con React, javaScript, Tailwind o php y MySQL. trabajo freelance en landing page.",
     },
   ];
   return (

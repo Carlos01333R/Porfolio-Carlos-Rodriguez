@@ -30,6 +30,7 @@ export default function ExperienceItem({
           {description}
           {link && (
             <a
+              target="_blank"
               href={link}
               className="flex items-center text-yellow-400 font-raleway-black"
             >

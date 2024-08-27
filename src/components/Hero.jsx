@@ -19,10 +19,10 @@ export default function Hero() {
             Hey, soy Carlos R.
           </p>
           <p className="mt-4 text-xl font-raleway-regular">
-            +2 años de experiencia.{" "}
+            +1 años de experiencia en trabajos de desarrollo web y landing page.{" "}
             <span className="text-yellow-400">
-              Ingeniero de sistemas y tecnologo en sistemas de información y de
-              software{" "}
+              Soy Ingeniero de sistemas y tecnologo en sistemas de información y
+              de software{" "}
             </span>{" "}
             de Cartagena | Colombia 🇨🇴 . Especializado en el desarrollo de
             aplicaciones web únicas
