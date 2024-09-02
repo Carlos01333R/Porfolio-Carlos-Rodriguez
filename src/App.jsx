@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import Proyect from "./components/Proyect";
 import Header from "./components/Header";
 import { Toaster } from "sonner";
-import SobreMe from "./components/SobreMe";
+import SobreMe from "./components/sobreMe";
 import useSupabaseSobreMi from "./hook/ApiSobreMi";
 
 //import Contactme from "./components/Contactme";
