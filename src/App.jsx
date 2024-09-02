@@ -11,7 +11,7 @@ function App() {
   const { sobreMi } = useSupabaseSobreMi();
   return (
     <>
-      <header className="w-[90%] md:max-w-[900px] mx-auto mt-20">
+      <header className="w-[95%] md:max-w-[900px] mx-auto mt-20">
         <Header />
       </header>
       <main className="w-[90%] md:max-w-[900px] mx-auto">

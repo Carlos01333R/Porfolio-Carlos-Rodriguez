@@ -38,11 +38,11 @@ export default function Header() {
     <>
       <header className="fixed top-0 left-0 w-full mt-3 mb-10 flex justify-center items-center z-50">
         <nav
-          className={`font-raleway-medium text-sm md:text-normal w-[95%] truncate md:w-[30%] border-2 border-gray-200 rounded-xl p-1 transition-all duration-300 ${
+          className={`font-raleway-medium text-sm md:text-normal w-[95%]  truncate md:w-[30%] border-2 border-gray-200 rounded-xl p-1 transition-all duration-300 ${
             isScrolled ? "bg-white/30 backdrop-blur-md" : ""
           }`}
         >
-          <ul className="flex items-center gap-x-5 justify-center">
+          <ul className="flex items-center gap-x-3 md:gap-x-5 justify-center ">
             <li className="flex items-center gap-x-2 ">
               <a
                 href="#experiencie"
@@ -68,7 +68,7 @@ export default function Header() {
               </a>
             </li>
             {sobreMi.map((item) => (
-              <li key={item.id} className="flex items-center gap-x-2">
+              <li key={item.id} className="flex items-center gap-x-3">
                 <a href={`mailto:${item.mail}`}>Contacto</a>
               </li>
             ))}
