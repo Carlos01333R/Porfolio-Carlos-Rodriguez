@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Dropdown,
   DropdownTrigger,
@@ -8,7 +9,7 @@ import {
 import Contact from "./icon/Contact";
 import Email from "./icon/Email";
 import WhatsApp from "./icon/WhatsApp";
-export default function DropdownContact() {
+export default function DropdownContact({ email, whatsapp }) {
   return (
     <Dropdown className="text-black">
       <DropdownTrigger>
@@ -23,10 +24,7 @@ export default function DropdownContact() {
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions">
         <DropdownItem key="new">
-          <a
-            className="flex items-center gap-2"
-            href="mailto:carlosrodriguezanavila0@@gmail.com"
-          >
+          <a className="flex items-center gap-2" href={`mailto:${email}`}>
             <Email />
             Enviar correo
           </a>
@@ -35,7 +33,7 @@ export default function DropdownContact() {
           <a
             className="flex items-center gap-2"
             target="_blank"
-            href="https://wa.me/3205576260"
+            href={`https://wa.me/${whatsapp}`}
           >
             <WhatsApp />
             Enviar WhatsApp

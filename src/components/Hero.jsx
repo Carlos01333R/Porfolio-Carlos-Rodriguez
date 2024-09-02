@@ -1,7 +1,10 @@
 import { Image } from "@nextui-org/react";
 import LinkedIn from "./icon/LinkedIn";
 import DropdownContact from "./Dropdown";
+import useSupabaseSobreMi from "../hook/ApiSobreMi";
+import Spliner from "./Spliner";
 export default function Hero() {
+  const { sobreMi, loading } = useSupabaseSobreMi();
   return (
     <>
       <section className="w-full text-white">
@@ -14,31 +17,45 @@ export default function Hero() {
             className="rounded-full group"
           />
         </div>
-        <div className="mt-5">
-          <p className="text-4xl md:text-6xl font-raleway-black ">
-            Hey, soy Carlos R.
-          </p>
-          <p className="mt-4 text-xl font-raleway-regular">
-            +1 años de experiencia en trabajos de desarrollo web y landing page.{" "}
-            <span className="text-yellow-400">
-              Soy Ingeniero de sistemas y tecnologo en sistemas de información y
-              de software{" "}
-            </span>{" "}
-            de Cartagena | Colombia 🇨🇴 . Especializado en el desarrollo de
-            aplicaciones web únicas
-          </p>
-        </div>
-        <div className="flex gap-5 mt-5">
-          <DropdownContact />
-          <a
-            className="bg-transparent border-2 border-gray-50 p-1  px-2 rounded-xl flex items-center gap-2"
-            target="_black"
-            href="https://www.linkedin.com/in/carlos-andres-rodriguez-avila-9742a428b/"
-          >
-            <LinkedIn />
-            LinkedIn
-          </a>
-        </div>
+        <section className="w-full mt-10">
+          {loading && <Spliner title={"Datos"} />}
+        </section>
+
+        {!loading &&
+          sobreMi.map((item) => (
+            <>
+              <div key={item.id} className="mt-5">
+                <p className="text-4xl md:text-6xl font-raleway-black ">
+                  Hey, soy {item.name.slice(0, 6)}.
+                </p>
+
+                <p className="mt-4 text-xl font-raleway-regular">
+                  {item.experienciageneral.slice(0, 69)}
+                  <span className="text-yellow-400">
+                    {item.experienciageneral.slice(69, 148)}
+                  </span>
+                  <span>
+                    {item.experienciageneral.slice(
+                      148,
+                      item.experienciageneral.length
+                    )}
+                    .
+                  </span>
+                </p>
+              </div>
+              <div className="flex gap-5 mt-5">
+                <DropdownContact email={item.mail} whatsapp={item.whasapp} />
+                <a
+                  className="bg-transparent border-2 border-gray-50 p-1  px-2 rounded-xl flex items-center gap-2"
+                  target="_black"
+                  href={item.LinkedIn}
+                >
+                  <LinkedIn />
+                  LinkedIn
+                </a>
+              </div>
+            </>
+          ))}
       </section>
     </>
   );

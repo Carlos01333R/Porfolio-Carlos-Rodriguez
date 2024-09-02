@@ -17,7 +17,7 @@ export default function InfoProjects({
   onOpenChange,
 }) {
   const getProjectByID = (PROJECTS) => {
-    return PROJECTS.find((project) => project.link === idProject);
+    return PROJECTS.find((project) => project.id === idProject);
   };
 
   const selectedProject = getProjectByID(project);
@@ -51,7 +51,7 @@ export default function InfoProjects({
                         style={{
                           maskImage: "linear-gradient(black 90%, transparent)",
                         }}
-                        src={selectedProject.image}
+                        src={selectedProject.imgUrl}
                         alt="project"
                         height={200}
                         className="rounded-xl object-cover w-full"
@@ -59,22 +59,15 @@ export default function InfoProjects({
                     </section>
                     <section className="mt-4">
                       <p className="ml-2 font-raleway-black text-2xl font-bold">
-                        {selectedProject.title}
+                        {selectedProject.name}
                       </p>
                       <p className="ml-2 font-raleway-medium">
-                        {selectedProject.description}
+                        {selectedProject.descripcion}
                       </p>
                       <ul className="flex flex-row mb-2 gap-x-2 items-center ml-1 mt-2">
-                        {selectedProject.tags.map((tag) => (
-                          <li key={tag.name}>
-                            <span
-                              className={`flex gap-x-2 rounded-full text-xs ${tag.class} py-[3px] px-2 items-center`}
-                            >
-                              <tag.icon class="size-4" />
-                              {tag.name}
-                            </span>
-                          </li>
-                        ))}
+                        <li className="font-raleway-black">
+                          {selectedProject.Tecnologias}
+                        </li>
                       </ul>
                     </section>
                   </>
@@ -82,12 +75,12 @@ export default function InfoProjects({
                   <p>Project not found</p>
                 )}
                 <div className="flex gap-2 w-full justify-center items-center mt-2 font-raleway-regular text-white text-sm font-bold">
-                  {selectedProject.github != "" ? (
+                  {selectedProject.code != "" ? (
                     <>
                       <a
                         target="_blank"
                         className="flex items-center gap-2 bg-transparent border-2 border-gray-200 text-white py-1 px-3 rounded-xl hover:scale-105 hover:transition-all hover:duration-300"
-                        href={selectedProject.github}
+                        href={selectedProject.code}
                       >
                         <Code />
                         Code
