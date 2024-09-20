@@ -240,7 +240,7 @@ export default function Proyect() {
           <Button
             variant="default"
             className="border-2 px-4 py-2 rounded-xl border-gray-700 text-white text-sm font-bold flex items-center"
-            onClick={() => setSlice(slice + 4)}
+            onClick={() => setSlice(slice + 5)}
           >
             <More />
             Ver mas
@@ -248,7 +248,7 @@ export default function Proyect() {
         ) : (
           <button
             className="border-2 px-4 py-2 rounded-xl border-gray-700 text-white text-sm font-bold flex items-center"
-            onClick={() => setSlice(slice - 4)}
+            onClick={() => setSlice(slice - 5)}
           >
             <Less />
             Ver menos
