@@ -23,7 +23,7 @@ export default function Experiencie() {
 
       now: "actualmente...",
       descripcion:
-        "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
+        "Desarrollo de aplicaciones web para el cliente, desde el diseño hasta la implementación. Aplicaciones web con React,Tailwind CSS, supabase, NextUI y aplicaiones moviles con react native",
     },
   ];
   return (
