@@ -1,10 +1,10 @@
 import { Image } from "@nextui-org/react";
 import Sobremi from "./icon/Sobremi";
-import useSupabaseSobreMi from "../hook/ApiSobreMi";
-import SkeletonSobreMi from "./skeletonSobreMi";
-import Spliner from "./Spliner";
+//import useSupabaseSobreMi from "../hook/ApiSobreMi";
+//import SkeletonSobreMi from "./skeletonSobreMi";
+//import Spliner from "./Spliner";
 export default function SobreMe() {
-  const { sobreMi, loading } = useSupabaseSobreMi();
+  // const { sobreMi, loading } = useSupabaseSobreMi();
   return (
     <>
       <div className="flex justify-start items-start mt-20 mb-0 ml-5">
@@ -22,34 +22,32 @@ export default function SobreMe() {
           alt="Carlos Rodriguez"
           className="rounded-full group border-8 border-[#fff] p-2 hover:border-0 hover:transition-all hover:duration-500 hover:scale-110"
         />
-        <section className="w-full mt-10">
-          {loading && <Spliner title={"Descripción"} />}
-        </section>
 
-        {loading ? (
-          <SkeletonSobreMi />
-        ) : (
-          sobreMi.map((item) => (
-            <p
-              key={item.id}
-              className="w-[90%] md:w-[60%] mt-10 font-raleway-regular leading-8"
-            >
-              {item.descripcion.slice(0, 104)}
-              <span className="text-yellow-400 ml-1">
-                {item.descripcion.slice(104, 160)}
-              </span>{" "}
-              {item.descripcion.slice(160, 191)}
-              <span className="text-yellow-400 ml-1">
-                {item.descripcion.slice(191, 265)}
-              </span>{" "}
-              {item.descripcion.slice(265, 356)}
-              <span className="text-yellow-400 ml-1">
-                {item.descripcion.slice(356, 446)}
-              </span>{" "}
-              {item.descripcion.slice(446, item.descripcion.length)}.
-            </p>
-          ))
-        )}
+        <p className="w-[90%] md:w-[60%] mt-10 font-raleway-regular leading-8">
+          Me llamo carlos Rodriguez. Empecé en la programación en la
+          Universidad, tenía 16 años. Actualmente estoy{" "}
+          <span className="text-[#FEF08A]">
+            soy tecnologo en sistema y futuro ingeniero de sistemas.
+          </span>
+        </p>
+
+        <p className="w-[90%] md:w-[60%] mt-2 font-raleway-regular leading-8">
+          Algunos de mis éxitos incluyen{" "}
+          <span className="text-[#FEF08A]">
+            Colaborar en la Plataforma de la corporación universitaria rafael
+            Nuñez.
+          </span>
+          Actualmente se esta trabando un nuevo proyecto en la Universidad.
+        </p>
+
+        <p className="w-[90%] md:w-[60%] mt-2 font-raleway-regular leading-8">
+          Como tecnologo en sistema,
+          <span className="text-[#FEF08A]">
+            he trabajado con la alcaldia de cartagena Software y soporte de
+            sistemas en la Alcaldia.
+          </span>
+          Mi objetivo es ser una de los mejores desarrolladores web de colombia.
+        </p>
       </section>
     </>
   );

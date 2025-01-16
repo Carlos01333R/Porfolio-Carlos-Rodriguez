@@ -51,7 +51,7 @@ export default function InfoProjects({
                         style={{
                           maskImage: "linear-gradient(black 90%, transparent)",
                         }}
-                        src={selectedProject.imgUrl}
+                        src={selectedProject.image}
                         alt="project"
                         height={200}
                         className="rounded-xl object-cover w-full"
@@ -59,10 +59,10 @@ export default function InfoProjects({
                     </section>
                     <section className="mt-4">
                       <p className="ml-2 font-raleway-black text-2xl font-bold">
-                        {selectedProject.name}
+                        {selectedProject.title}
                       </p>
                       <p className="ml-2 font-raleway-medium">
-                        {selectedProject.descripcion}
+                        {selectedProject.description}
                       </p>
                       <ul className="flex flex-row mb-2 gap-x-2 items-center ml-1 mt-2">
                         <li className="font-raleway-black">
@@ -76,7 +76,7 @@ export default function InfoProjects({
                 )}
                 <div className="flex gap-2 w-full justify-center items-center mt-2 font-raleway-regular text-white text-sm font-bold">
                   {selectedProject.code != "" ? (
-                    <>
+                    <section className="flex ">
                       <a
                         target="_blank"
                         className="flex items-center gap-2 bg-transparent border-2 border-gray-200 text-white py-1 px-3 rounded-xl hover:scale-105 hover:transition-all hover:duration-300"
@@ -94,7 +94,7 @@ export default function InfoProjects({
                         <Preview />
                         Preview
                       </a>
-                    </>
+                    </section>
                   ) : (
                     <a
                       target="_blank"
