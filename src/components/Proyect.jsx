@@ -83,19 +83,19 @@ export default function Proyect() {
       title: "Sorteo online",
       description: "Pagina web de un sorteo online",
       link: "https://sorteopy.vercel.app/",
-      github: "https://github.com/Carlos01333R/VEGGIE-KING.git",
+      github: "",
       image: "/sorteo.png",
       tags: [TAGS.REACT, TAGS.TAILWIND],
       type: "Web app",
     },
     {
-      id: "4",
-      title: " dragon ball z",
+      id: "10",
+      title: "Generador de Curriculum Vitae",
       description:
-        "pagina web de dragon ball z con tailwind css y javascript inspirado en una api de dragon ball z creada por el equipo de la api de dragon ball z",
-      link: "https://dragonballz-red.vercel.app/",
-      github: "https://github.com/Carlos01333R/dragonballz.git",
-      image: "/dragon.png",
+        "pagina web para generar curriculum vitae al instante y valores actualizados en tiempo real en una plantilla de curriculum vitae",
+      link: "https://generador-de-curriculum-vitae.vercel.app/",
+      github: "",
+      image: "/generador.png",
       tags: [TAGS.REACT, TAGS.TAILWIND],
       type: "Web app",
     },
@@ -107,6 +107,17 @@ export default function Proyect() {
       link: "https://cripto-converter.vercel.app/",
       github: "https://github.com/Carlos01333R/criptoConverter.git",
       image: "/cripto.png",
+      tags: [TAGS.REACT, TAGS.TAILWIND],
+      type: "Web app",
+    },
+    {
+      id: "4",
+      title: " dragon ball z",
+      description:
+        "pagina web de dragon ball z con tailwind css y javascript inspirado en una api de dragon ball z creada por el equipo de la api de dragon ball z",
+      link: "https://dragonballz-red.vercel.app/",
+      github: "https://github.com/Carlos01333R/dragonballz.git",
+      image: "/dragon.png",
       tags: [TAGS.REACT, TAGS.TAILWIND],
       type: "Web app",
     },
@@ -208,12 +219,12 @@ export default function Proyect() {
                 <p className="absolute bottom-5 left-5 z-20 w-[80%]  text-2xl font-raleway-black flex flex-col truncate">
                   {project.title}
                   <div className="flex gap-2 mt-2 font-raleway-regular text-white text-sm font-bold">
-                    {project.code != "" ? (
+                    {project.github != "" ? (
                       <div className="flex gap-x-2">
                         <a
                           target="_blank"
                           className="flex items-center gap-2 bg-transparent border-2 border-gray-200 text-white py-1 px-3 rounded-xl "
-                          href={project.code}
+                          href={project.github}
                         >
                           <Code />
                           Code

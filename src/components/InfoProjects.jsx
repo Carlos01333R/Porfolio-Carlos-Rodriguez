@@ -74,13 +74,13 @@ export default function InfoProjects({
                 ) : (
                   <p>Project not found</p>
                 )}
-                <div className="flex gap-2 w-full justify-center items-center mt-2 font-raleway-regular text-white text-sm font-bold">
-                  {selectedProject.code != "" ? (
-                    <section className="flex ">
+                <div className="flex gap-2 w-full justify-center items-center mt-2 font-raleway-regular text-white text-sm font-bold ">
+                  {selectedProject.github != "" ? (
+                    <section className="flex gap-x-2">
                       <a
                         target="_blank"
                         className="flex items-center gap-2 bg-transparent border-2 border-gray-200 text-white py-1 px-3 rounded-xl hover:scale-105 hover:transition-all hover:duration-300"
-                        href={selectedProject.code}
+                        href={selectedProject.github}
                       >
                         <Code />
                         Code
