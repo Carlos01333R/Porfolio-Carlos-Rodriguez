@@ -49,16 +49,7 @@ export const PROJECTS = [
     type: "Landing",
     tags: [TAGS.REACT, TAGS.TAILWIND],
   },
-  {
-    id: "3",
-    title: "VEGGIE King",
-    description: "Landing page de un restaurante ",
-    link: "https://veggieking.vercel.app/",
-    github: "https://github.com/Carlos01333R/VEGGIE-KING.git",
-    image: "/Veggie.png",
-    tags: [TAGS.REACT, TAGS.TAILWIND],
-    type: "Landing",
-  },
+
   {
     id: "9",
     title: "Sorteo online",
@@ -81,6 +72,17 @@ export const PROJECTS = [
     type: "Web app",
   },
   {
+    id: "11",
+    title: "Barber Citas",
+    description:
+      "pagina web para barber citas para coger una cita en una barberia con react , tailwind css y supabase",
+    link: "https://barber-citas.vercel.app/",
+    github: "",
+    image: "/barber.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+    type: "Web app",
+  },
+  {
     id: "5",
     title: "Cotizar criptomonedas ",
     description:
@@ -90,6 +92,16 @@ export const PROJECTS = [
     image: "/cripto.png",
     tags: [TAGS.REACT, TAGS.TAILWIND],
     type: "Web app",
+  },
+  {
+    id: "3",
+    title: "VEGGIE King",
+    description: "Landing page de un restaurante ",
+    link: "https://veggieking.vercel.app/",
+    github: "https://github.com/Carlos01333R/VEGGIE-KING.git",
+    image: "/Veggie.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+    type: "Landing",
   },
   {
     id: "4",
