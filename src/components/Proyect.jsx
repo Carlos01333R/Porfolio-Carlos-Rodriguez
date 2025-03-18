@@ -11,11 +11,10 @@ import InfoProjects from "./InfoProjects";
 import { PROJECTS } from "../data/info";
 
 export default function Proyect() {
-  const [slice, setSlice] = useState(4);
+  const [slice, setSlice] = useState(6);
   const [filter, setFilter] = useState("all");
   const [idProject, setIdProject] = useState(null);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  //const { countries, loading } = useProject();
 
   const filterProjects = (PROJECTS) => {
     if (filter === "all") {
@@ -43,64 +42,53 @@ export default function Proyect() {
 
       <section className="mt-14 w-full md:w-full grid grid-cols-1  gap-x-5 gap-y-5 md:grid-cols-2 m-auto md:ml-3">
         {FilterType.slice(0, slice).map((project) => (
-          <>
+          <div
+            className="w-full  md:max-w-full m-auto relative flex justify-center items-center"
+            key={project.link}
+          >
             <div
-              className="w-full  md:max-w-full m-auto relative flex justify-center items-center"
-              key={project.link}
+              className="relative w-full h-[250px] md:max-2xl:flex md:w-[450px] bg-cover bg-center rounded-xl "
+              style={{
+                backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(${project.image})`,
+              }}
             >
-              <div
-                className="relative w-full h-[250px] md:max-2xl:flex md:w-[450px] bg-cover bg-center rounded-xl "
-                style={{
-                  backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(${project.image})`,
-                }}
-              >
-                <div className="absolute top-2 left-5 z-20 w-24 bg-gray-700 rounded-xl px-2 py-1">
-                  <p className="text-center font-raleway-regular text-white text-sm font-bold">
-                    {project.type}
-                  </p>
-                </div>
-                <div className="absolute top-1 flex left-[90%] z-20 w-10 px-2 py-1">
-                  <Tooltip
-                    className="text-black font-raleway-medium"
-                    content="Ver más información"
-                    placement="top"
+              <div className="absolute top-2 left-5 z-20 w-24 bg-gray-700 rounded-xl px-2 py-1">
+                <p className="text-center font-raleway-regular text-white text-sm font-bold">
+                  {project.type}
+                </p>
+              </div>
+              <div className="absolute top-1 flex left-[90%] z-20 w-10 px-2 py-1">
+                <Tooltip
+                  className="text-black font-raleway-medium"
+                  content="Ver más información"
+                  placement="top"
+                >
+                  <button
+                    onClick={() => {
+                      setIdProject(project.id);
+                      onOpen();
+                    }}
+                    className="bg-gray-700 rounded-full"
+                    name="Info project"
                   >
-                    <button
-                      onClick={() => {
-                        setIdProject(project.id);
-                        onOpen();
-                      }}
-                      className="bg-gray-700 rounded-full"
-                      name="Info project"
-                    >
-                      <Info />
-                    </button>
-                  </Tooltip>
-                </div>
-                <p className="absolute bottom-5 left-5 z-20 w-[80%]  text-2xl font-raleway-black flex flex-col truncate">
-                  {project.title}
-                  <div className="flex gap-2 mt-2 font-raleway-regular text-white text-sm font-bold">
-                    {project.github != "" ? (
-                      <div className="flex gap-x-2">
-                        <a
-                          target="_blank"
-                          className="flex items-center gap-2 bg-transparent border-2 border-gray-200 text-white py-1 px-3 rounded-xl "
-                          href={project.github}
-                        >
-                          <Code />
-                          Code
-                        </a>
+                    <Info />
+                  </button>
+                </Tooltip>
+              </div>
+              <p className="absolute bottom-5 left-5 z-20 w-[80%]  text-2xl font-raleway-black flex flex-col truncate">
+                {project.title}
+                <div className="flex gap-2 mt-2 font-raleway-regular text-white text-sm font-bold">
+                  {project.github != "" ? (
+                    <div className="flex gap-x-2">
+                      <a
+                        target="_blank"
+                        className="flex items-center gap-2 bg-transparent border-2 border-gray-200 text-white py-1 px-3 rounded-xl "
+                        href={project.github}
+                      >
+                        <Code />
+                        Code
+                      </a>
 
-                        <a
-                          target="_blank"
-                          className="flex items-center gap-2 bg-transparent border-2 border-gray-200 text-white py-1 px-3 rounded-xl"
-                          href={project.link}
-                        >
-                          <Preview />
-                          Preview
-                        </a>
-                      </div>
-                    ) : (
                       <a
                         target="_blank"
                         className="flex items-center gap-2 bg-transparent border-2 border-gray-200 text-white py-1 px-3 rounded-xl"
@@ -109,33 +97,43 @@ export default function Proyect() {
                         <Preview />
                         Preview
                       </a>
-                    )}
-                  </div>
-                </p>
-              </div>
+                    </div>
+                  ) : (
+                    <a
+                      target="_blank"
+                      className="flex items-center gap-2 bg-transparent border-2 border-gray-200 text-white py-1 px-3 rounded-xl"
+                      href={project.link}
+                    >
+                      <Preview />
+                      Preview
+                    </a>
+                  )}
+                </div>
+              </p>
             </div>
-          </>
+          </div>
         ))}
       </section>
 
       <div className="flex w-full justify-center mt-10">
-        {slice === 4 ? (
+        {slice === 6 ? (
           <Button
             variant="default"
             className="border-2 px-4 py-2 rounded-xl border-gray-700 text-white text-sm font-bold flex items-center"
-            onClick={() => setSlice(slice + 5)}
+            onClick={() => setSlice(FilterType.length)}
           >
             <More />
-            Ver mas
+            Ver más
           </Button>
         ) : (
-          <button
+          <Button
+            variant="default"
             className="border-2 px-4 py-2 rounded-xl border-gray-700 text-white text-sm font-bold flex items-center"
-            onClick={() => setSlice(slice - 5)}
+            onClick={() => setSlice(6)}
           >
             <Less />
             Ver menos
-          </button>
+          </Button>
         )}
         <InfoProjects
           project={PROJECTS}

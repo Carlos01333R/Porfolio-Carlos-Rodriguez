@@ -38,17 +38,6 @@ export const PROJECTS = [
     type: "Landing",
     tags: [TAGS.REACT, TAGS.TAILWIND],
   },
-  {
-    id: "2",
-    title: "Luxury contructora DEMO",
-    description:
-      "Landing page de demo para Luxury contructora costo $1,500,000,00 COP",
-    link: "https://luxury-snowy.vercel.app/",
-    github: "",
-    image: "/lucury.png",
-    type: "Landing",
-    tags: [TAGS.REACT, TAGS.TAILWIND],
-  },
 
   {
     id: "9",
@@ -81,6 +70,28 @@ export const PROJECTS = [
     image: "/barber.png",
     tags: [TAGS.REACT, TAGS.TAILWIND],
     type: "Web app",
+  },
+  {
+    id: "12",
+    title: "FashionStore",
+    description:
+      "pagina web para FashionStore con react , tailwind css y supabase. carrito de compras integrados y pagos con mercadopago",
+    link: "https://fashionstore-alpha.vercel.app/",
+    github: "",
+    image: "tienda.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+    type: "Web app",
+  },
+  {
+    id: "2",
+    title: "Luxury contructora DEMO",
+    description:
+      "Landing page de demo para Luxury contructora costo $1,500,000,00 COP",
+    link: "https://luxury-snowy.vercel.app/",
+    github: "",
+    image: "/lucury.png",
+    type: "Landing",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
   },
   {
     id: "5",
