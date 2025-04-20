@@ -83,6 +83,17 @@ export const PROJECTS = [
     type: "Web app",
   },
   {
+    id: "13",
+    title: "MotoCar",
+    description:
+      "App web para alquiler de motos y carros con react , tailwind css y supabase",
+    link: "https://motocar.vercel.app/",
+    github: "",
+    image: "motocar.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+    type: "Web app",
+  },
+  {
     id: "2",
     title: "Luxury contructora DEMO",
     description:
