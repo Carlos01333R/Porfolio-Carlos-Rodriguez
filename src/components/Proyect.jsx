@@ -26,6 +26,16 @@ export default function Proyect() {
   };
 
   const FilterType = filterProjects(PROJECTS);
+  const showMore = FilterType.length > slice;
+  const showLess = slice > 6;
+
+  const handleShowMore = () => {
+    setSlice(FilterType.length);
+  };
+
+  const handleShowLess = () => {
+    setSlice(6);
+  };
 
   return (
     <>
@@ -40,11 +50,11 @@ export default function Proyect() {
         <Filter PROJECT={PROJECTS} filter={filter} setFilter={setFilter} />
       </section>
 
-      <section className="mt-14 w-full md:w-full grid grid-cols-1  gap-x-5 gap-y-5 md:grid-cols-2 m-auto md:ml-3">
+      <section className="mt-14 w-full md:w-full grid grid-cols-1 gap-x-5 gap-y-5 md:grid-cols-2 m-auto md:ml-3">
         {FilterType.slice(0, slice).map((project) => (
           <div
-            className="w-full  md:max-w-full m-auto relative flex justify-center items-center"
-            key={project.link}
+            className="w-full md:max-w-full m-auto relative flex justify-center items-center"
+            key={project.id}
           >
             <div
               className="relative w-full h-[250px] md:max-2xl:flex md:w-[450px] bg-cover bg-center rounded-xl "
@@ -75,7 +85,7 @@ export default function Proyect() {
                   </button>
                 </Tooltip>
               </div>
-              <p className="absolute bottom-5 left-5 z-20 w-[80%]  text-2xl font-raleway-black flex flex-col truncate">
+              <p className="absolute bottom-5 left-5 z-20 w-[80%] text-2xl font-raleway-black flex flex-col truncate">
                 {project.title}
                 <div className="flex gap-2 mt-2 font-raleway-regular text-white text-sm font-bold">
                   {project.github != "" ? (
@@ -115,26 +125,29 @@ export default function Proyect() {
         ))}
       </section>
 
-      <div className="flex w-full justify-center mt-10">
-        {slice === 6 ? (
+      <div className="flex w-full justify-center mt-10 gap-4">
+        {showMore && (
           <Button
-            variant="default"
-            className="border-2 px-4 py-2 rounded-xl border-gray-700 text-white text-sm font-bold flex items-center"
-            onClick={() => setSlice(FilterType.length)}
+            onClick={handleShowMore}
+            className="bg-transparent border-2 border-gray-200 text-white py-1 px-3 rounded-xl font-raleway-regular font-bold flex items-center gap-2"
           >
             <More />
-            Ver más
-          </Button>
-        ) : (
-          <Button
-            variant="default"
-            className="border-2 px-4 py-2 rounded-xl border-gray-700 text-white text-sm font-bold flex items-center"
-            onClick={() => setSlice(6)}
-          >
-            <Less />
-            Ver menos
+            Mostrar más
           </Button>
         )}
+
+        {showLess && (
+          <Button
+            onClick={handleShowLess}
+            className="bg-transparent border-2 border-gray-200 text-white py-1 px-3 rounded-xl font-raleway-regular font-bold flex items-center gap-2"
+          >
+            <Less />
+            Mostrar menos
+          </Button>
+        )}
+      </div>
+
+      <div className="flex w-full justify-center mt-10">
         <InfoProjects
           project={PROJECTS}
           idProject={idProject}

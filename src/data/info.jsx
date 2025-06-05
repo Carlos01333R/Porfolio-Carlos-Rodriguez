@@ -28,6 +28,17 @@ export const TAGS = {
 
 export const PROJECTS = [
   {
+    id: "0",
+    title: "Facturacion Pro",
+    description:
+      "Facturacion de pro con react , tailwind css y supabase. gestion de inventario y facturacion, clientes y productos",
+    link: "https://fucturacion-pro.vercel.app/",
+    image: "/factuPro.png",
+    github: "",
+    type: "Web app",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
+  {
     id: "1",
     title: "FurEver | Adocta un animal",
     description:
@@ -78,7 +89,7 @@ export const PROJECTS = [
       "pagina web para FashionStore con react , tailwind css y supabase. carrito de compras integrados y pagos con mercadopago",
     link: "https://fashionstore-alpha.vercel.app/",
     github: "",
-    image: "tienda.png",
+    image: "/tienda.png",
     tags: [TAGS.REACT, TAGS.TAILWIND],
     type: "Web app",
   },
@@ -89,7 +100,7 @@ export const PROJECTS = [
       "App web para alquiler de motos y carros con react , tailwind css y supabase",
     link: "https://motocar.vercel.app/",
     github: "",
-    image: "motocar.png",
+    image: "/motocar.png",
     tags: [TAGS.REACT, TAGS.TAILWIND],
     type: "Web app",
   },
